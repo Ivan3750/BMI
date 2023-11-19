@@ -43,15 +43,35 @@
 
 .main__box{
 display: flex;
-flex-direction: column;
+justify-content: space-between;
+max-width: 1200px;
 margin: 50px auto;
-max-width: 500px;
-height: 300px;
-border-radius: 40px;
-background-color: rgb(0, 157, 255);
 }
 
+.BMI__box{
 
+width: 500px;
+height: 600px;
+flex-shrink: 0;
+border-radius: 20px;
+background: #FFF;
+box-shadow: 2px 2px 20px 7px rgba(0, 0, 0, 0.25);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.BMI__result{
+    width: 500px;
+height: 600px;
+flex-shrink: 0;
+border-radius: 20px;
+background: #FFF;
+box-shadow: 2px 2px 20px 7px rgba(0, 0, 0, 0.25);
+display: none;
+flex-direction: column;
+align-items: center;
+}
 
 
 .title {
@@ -64,31 +84,66 @@ background-color: rgb(0, 157, 255);
 
 
 input{
-    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 20px 7px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 400px;
+    height: 75px;
+    color: #0029FF;
+text-align: center;
+font-family: Comfortaa;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-radius: 35px;
+
 }
 
 
 .form {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
     
+}
+
+.input__box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 .weight {
 
-    width: 400px;
-    height: 50px;
-    border-radius: 30px;
+    width: 185px;
     border: 0;
 }
 .height {
   
+    width: 185px;
+    border: 0;
+}
+.name {
+  
     width: 400px;
-    height: 50px;
-    border-radius: 30px;
     border: 0;
 }
 .count {
+    width: 400px;
+    height: 50px;
+    border-radius: 50px;
+    border: 0;
+    margin: 10px auto;
+    margin-bottom: 0;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 500;
+}
+.restart{
+    margin-top: 125px!important;
     width: 400px;
     height: 50px;
     border-radius: 50px;
@@ -105,48 +160,36 @@ input{
     color: var(--blue);
 }
 
-.input__box{
-    margin: 20px auto;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-}
 
-label{
-    margin-bottom: 10px;
-    margin-left: 10px;
-    font-size: 18px;
-    color: #fff;
-    font-weight: bolder;
+.BMI{
+    margin-top: 150px;
+text-align: center;
+font-family: Comfortaa;
+font-size: 80px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
 
-.BMI__box {
-    display: flex;
-flex-direction: column;
-margin: 50px auto;
-width: 400px;
-height: 100px;
-border-radius: 40px;
-background-color: var(--blue);
-padding: 50px;
+
+
+
+
+
+.Bot__button{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+   animation: bot 3s linear infinite alternate-reverse; 
 }
-.BMI {
-    font-size: 24px;
-    color: #fff;
-    font-weight: bolder;
+
+@keyframes bot {
+    0%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
-.BMI-means {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #fff;
-    font-weight: bolder;
-}
-.BMI-status {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #fff;
-    font-weight: bolder;
-}
+

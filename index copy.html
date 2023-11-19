@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <h1 class="title">Порахуй свій BMI</h1>
+        <div class="BMI__box">
+            <p class="BMI">0</p>
+            <p class="BMI-means"></p>
+            <p class="BMI-status"></p>
+        </div>
+        <div class="main__box">
+            <form  class="form">
+                <div class="input__box">
+                    <label for="">Нік(тг)</label>
+                    <input type="text" name="name" id="name" class="name" placeholder="Вкажи нік">
+                </div>
+                <div class="input__box">
+
+                    <label for="">Вага(кг)</label>
+                    <input type="number" name="weight" id="weight" class="weight" placeholder="Вкажи вагу">
+                </div>
+                <div class="input__box">
+                    
+                    <label for="">Ріст(cм)</label>
+                    <input type="number" name="height" id="height" class="height" placeholder="Вкажи ріст">
+                </div>
+                    <button type="submit" class="count">Порахувати</button>
+            </form>
+        </div>
+        <div class="Bot__button">
+            <a href="https://t.me/Info_BMI_bot" target="_blank" id="telegramLink">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Telegram" width="75px">
+            </a>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

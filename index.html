@@ -9,29 +9,39 @@
 </head>
 <body>
     <main>
-        <h1 class="title">Порахуй свій BMI</h1>
-        <div class="BMI__box">
-            <p class="BMI">BMI: 0</p>
-            <p class="BMI-means"></p>
-            <p class="BMI-status"></p>
-        </div>
         <div class="main__box">
-            <form  class="form">
-                <div class="input__box">
-
-                    <label for="">Вага(кг)</label>
-                    <input type="number" name="weight" id="weight" class="weight" placeholder="Вкажи вагу">
+            <div class="left__box">
+                <img src="./img/people.png" alt="img">
+            </div>
+            <div class="right__box">
+                <div class="BMI__box">
+                    <h1 class="title">BMI</h1>
+                    <form class="form">
+                        <input type="text" name="name" id="name" class="name" placeholder="Вкажи нік" required>
+                        <input type="text" name="fname" id="fname" class="fname" placeholder="Вкажи імя" required>
+                        <div class="input__box">
+                            <input type="number" name="weight" id="weight" class="weight" placeholder="Вкажи вагу" required>        
+                            <input type="number" name="height" id="height" class="height" placeholder="Вкажи ріст" required>
+                        </div>
+                        <button class="count">Розрахувати</button>
+                    </form>
                 </div>
-                <div class="input__box">
-                    
-                    <label for="">Ріст(cм)</label>
-                    <input type="number" name="height" id="height" class="height" placeholder="Вкажи ріст">
+                <div class="BMI__result">
+                    <p class="BMI">BMI: 0</p>
+                    <p class="BMI-means"></p>
+                    <p class="BMI-status"></p>
+                    <button onclick="restart()" class="restart">Ще раз</button>
                 </div>
-                    <button type="submit" class="count">Порахувати</button>
-            </form>
+            
+            </div>
+        </div>
+        <div class="Bot__button">
+            <a href="https://t.me/Info_BMI_bot" target="_blank" id="telegramLink">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Telegram" width="75px">
+            </a>
         </div>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
